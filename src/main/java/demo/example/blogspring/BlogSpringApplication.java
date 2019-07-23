@@ -24,9 +24,9 @@ public class BlogSpringApplication {
 
     public static void main(String[] args) {
         SpringApplication.run(BlogSpringApplication.class, args);
-
+        System.out.println("Hello Git!");
     }
-    @Bean @Profile("dev")
+    @Bean @Profile("div")
     public CommandLineRunner runner(AuthorRepository authorRepository, PostRepository postRepository){
         return args -> {
             Author author1=new Author("Thaw Thaw", LocalDate.of(2000,3,27),"Horror", Gender.MALE);
